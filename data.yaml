@@ -1,0 +1,26 @@
+path: ../datasets/spectrum500  
+train: train/images
+val: valid/images
+test: test/images
+
+# Number of multispectral image channels
+channels: 1
+
+# Class-1 names
+nc: 4
+names:
+  0: bottle
+  1: round can
+  2: round cup
+  3: square box
+
+# Class-2 names
+nc1: 5
+names:
+  0: cr plastic
+  1: metal
+  2: paper
+  3: glass
+  4: w plastic
+
+
