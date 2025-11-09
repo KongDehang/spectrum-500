@@ -1,0 +1,40 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+# Dual-Task Dataset Configuration: Detection + Semantic Segmentation
+# Path: datasets/spectrum500/data_detseg.yaml
+
+path: ../datasets/spectrum500  # dataset root dir (relative to this file)
+train: train/images  # train images (relative to 'path')
+val: valid/images  # val images (relative to 'path')
+
+# Detection labels (cls1 - object shapes)
+det_labels_train: train/det_labels
+det_labels_val: valid/det_labels
+
+# Segmentation labels (cls2 - materials)
+seg_labels_train: train/seg_labels
+seg_labels_val: valid/seg_labels
+
+
+# Input
+channels: 1  # number of input channels (1 for multispectral, 3 for RGB)
+
+# Task
+task: detect-segment  # dual-task: detection + semantic segmentation
+
+
+# Classes
+nc: 4  # number of detection classes (cls1)
+names:
+  0: bottle
+  1: round can
+  2: round cup
+  3: square box
+
+nc2: 4  # number of segmentation classes (cls2)
+names2:
+  0: metal
+  1: glass
+  2: plastic
+  3: paper
+
+
